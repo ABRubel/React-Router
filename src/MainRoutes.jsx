@@ -6,12 +6,14 @@ import Booklist from "./components/Booklist";
 import Booklayout from "./components/Booklayout";
 import NewBook from "./components/NewBook";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 function routes() {
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/about" element={<About />}></Route>
+      <Route path="/contact" element={<Contact />}></Route>
       <Route path="/books" element={<Booklayout />}>
         <Route index element={<Booklist />} />
         <Route path=":id" element={<Book />} />
