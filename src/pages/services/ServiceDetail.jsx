@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import servicesData from "./servicesData";
 
 function ServiceDetail(props) {
@@ -11,6 +11,8 @@ function ServiceDetail(props) {
       navigate("/");
     }, 2000);
   };
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <h1>Service Detail Page {id}</h1>
