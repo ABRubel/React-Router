@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useMatch } from "react-router-dom";
 import Home from "./components/Home";
 import Book from "./components/Book";
 import NotFound from "./components/NotFound";
@@ -11,6 +11,8 @@ import Services from "./components/Services";
 import ServiceDetail from "./pages/services/ServiceDetail";
 
 function routes() {
+  const data = useMatch("services");
+  console.log(data);
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
